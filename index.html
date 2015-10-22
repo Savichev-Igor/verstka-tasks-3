@@ -6,13 +6,249 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <!-- Поле для фильтрации по городу -->
-        <input
-            type="text"
-            placeholder="Город отправления"
-            value=""
-            onkeyup="this.setAttribute('value', this.value)">
-
-        <!-- Здесь применять вашу самую сильную магию -->
+        <section class="centered">
+            <h2 class="main_header">Табло аэропорта</h2>
+            <!-- Поле для фильтрации по городу -->
+            <input id="town_input" class="centered"
+                type="text"
+                placeholder="Аэропорт назначения"
+                value=""
+                onkeyup="this.setAttribute('value', this.value)">
+            <!-- Здесь применять вашу самую сильную магию -->
+            <input id="all_fly" type="radio" name="fly" value="all_fly" checked>Все
+            <br>
+            <input id="c_fly" type="radio" name="fly" value="come_fly">Прибытие
+            <br>
+            <input id="o_fly" type="radio" name="fly" value="out_fly">Отправление
+            <br>
+            <br>
+            <table class="main_table">
+                <tr>
+                    <td class="type"><strong>Тип рейса</strong></td>
+                    <td class="number"><strong>№ рейса</strong></td>
+                    <td class="company"><strong>Авиакомпания</strong></td>
+                    <td class="logo"><strong>Логотип авиакомпании</strong></td>
+                    <td class="type_aircraft"><strong>Тип воздушного судна</strong></td>
+                    <td class="destination"><strong>Аэропорт назначения</strong></td>
+                    <td class="time"><strong>Плановое время вылета или прилёта</strong></td>
+                    <td class="number_term"><strong>Номер терминала</strong></td>
+                    <td class="status"><strong>Статус рейса</strong></td>
+                </tr>
+                <tr name="Кольцово" value="o_fly">
+                    <td><img class="fly" src="start_fly.gif" alt="img"></td>
+                    <td>667</td>
+                    <td>Летай с Ашотом</td>
+                    <td>
+                        <img  class="logo" 
+                        src="uzb.png" alt="img">
+                    </td>
+                    <td>Старенький самолёт</td>
+                    <td>Кольцово</td>
+                    <td><time datetime="2014-10-23">2014-10-23</time></td>
+                    <td>9</td>
+                    <td>Вылетел</td>
+                </tr>
+                <tr name="Шереметьево" value="c_fly">
+                    <td><img class="fly" src="end_fly.gif" alt="img"></td>
+                    <td>679</td>
+                    <td>Яндекс авиалинии</td>
+                    <td>
+                        <img class="logo" src="ya.png" alt="img">
+                    </td>
+                    <td>Новенький самолёт</td>
+                    <td>Шереметьево</td>
+                    <td><time datetime="2014-10-24">2014-10-24</time></td>
+                    <td>7</td>
+                    <td>Приземлился</td>
+                </tr>
+                <tr name="Самарский аэропорт">
+                    <td><img class="fly" src="error.png" alt="img"></td>
+                    <td>791</td>
+                    <td>Компания аэрофлот</td>
+                    <td>
+                        <img class="logo"
+                        src="aero.png" alt="img">
+                    </td>
+                    <td>Обычный самолёт</td>
+                    <td>Самарский аэропорт</td>
+                    <td><time datetime="2014-10-29">2014-10-29</time></td>
+                    <td>10</td>
+                    <td>Отменён</td>
+                </tr>
+                <tr name="Шереметьево" value="o_fly">
+                    <td><img class="fly" src="start_fly.gif" alt="img"></td>
+                    <td>921</td>
+                    <td>Кыргыз аэрофлот</td>
+                    <td>
+                        <img class="logo"
+                        src="kir.png"
+                        alt="img">
+                    </td>
+                    <td>Кыргызский самолёт</td>
+                    <td>Шереметьево</td>
+                    <td><time datetime="2014-11-01">2014-11-01</time></td>
+                    <td>2</td>
+                    <td>Ожидание посадки</td>
+                </tr>
+                <tr name="Кольцово" value="c_fly">
+                    <td><img class="fly" src="end_fly.gif" alt="img"></td>
+                    <td>901</td>
+                    <td>Добролёт аэрофлот</td>
+                    <td>
+                        <img class="logo"
+                        src="dobro_let.png"
+                        alt="img">
+                    </td>
+                    <td>Обычный самолёт</td>
+                    <td>Кольцово</td>
+                    <td><time datetime="2014-11-02">2014-11-02</time></td>
+                    <td>5</td>
+                    <td>Летит</td>
+                </tr>
+                <tr name="Бабушкин аэропорт">
+                    <td><img class="fly" src="error.png" alt="img"></td>
+                    <td>951</td>
+                    <td>Внуковский аэрофлот</td>
+                    <td>
+                        <img class="logo" src="vnuk.png" alt="img">
+                    </td>
+                    <td>Старый самолёт</td>
+                    <td>Бабушкин аэропорт</td>
+                    <td><time datetime="2014-11-05">2014-11-05</time></td>
+                    <td>1</td>
+                    <td>Отменён</td>
+                </tr>
+                <tr name="Шереметьево" value="o_fly">
+                    <td><img class="fly" src="start_fly.gif" alt="img"></td>
+                    <td>697</td>
+                    <td>Летай с Ашотом</td>
+                    <td>
+                        <img  class="logo" src="uzb.png" alt="img">
+                    </td>
+                    <td>Новенький самолёт</td>
+                    <td>Шереметьево</td>
+                    <td><time datetime="2014-10-21">2014-10-21</time></td>
+                    <td>13</td>
+                    <td>Вылетел</td>
+                </tr>
+                <tr name="Кольцово">
+                    <td><img class="fly" src="error.png" alt="img"></td>
+                    <td>901</td>
+                    <td>Яндекс авиалинии</td>
+                    <td>
+                        <img class="logo" src="ya.png" alt="img">
+                    </td>
+                    <td>Старый самолёт</td>
+                    <td>Кольцово</td>
+                    <td><time datetime="2014-11-05">2014-11-05</time></td>
+                    <td>10</td>
+                    <td>Отменён</td>
+                </tr>
+                <tr name="Шереметьево" value="c_fly">
+                    <td><img class="fly" src="end_fly.gif"></td>
+                    <td>979</td>
+                    <td>Внуковский аэрофлот</td>
+                    <td>
+                        <img class="logo" src="vnuk.png" alt="img">
+                    </td>
+                    <td>Просто самолёт</td>
+                    <td>Шереметьево</td>
+                    <td><time datetime="2014-10-27">2014-10-27</time></td>
+                    <td>1</td>
+                    <td>По расписанию</td>
+                </tr>
+                <tr name="Кольцово" value="o_fly">
+                    <td><img class="fly" src="start_fly.gif" alt="img"></td>
+                    <td>1001</td>
+                    <td>Добролёт аэрофлот</td>
+                    <td>
+                        <img class="logo" src="dobro_let.png" alt="img">
+                    </td>
+                    <td>Плохой самолёт</td>
+                    <td>Кольцово</td>
+                    <td><time datetime="2014-11-02">2014-11-02</time></td>
+                    <td>8</td>
+                    <td>Вылетел</td>
+                </tr>
+                <tr name="Кольцово" value="c_fly">
+                    <td><img class="fly" src="end_fly.gif" alt="img"></td>
+                    <td>921</td>
+                    <td>Кыргыз аэрофлот</td>
+                    <td>
+                        <img class="logo" src="kir.png" alt="img">
+                    </td>
+                    <td>Чеченский самолёт</td>
+                    <td>Кольцово</td>
+                    <td><time datetime="2014-11-01">2014-11-01</time></td>
+                    <td>2</td>
+                    <td>Задерживается до <time datetime="2014-11-02">2014-11-02</time></td>
+                </tr>
+                <tr name="Самарский аэропорт" value="o_fly">
+                    <td><img class="fly" src="start_fly.gif" alt="img"></td>
+                    <td>701</td>
+                    <td>Компания аэрофлот</td>
+                    <td>
+                        <img class="logo" src="aero.png" alt="img">
+                    </td>
+                    <td>Обычный самолёт</td>
+                    <td>Самарский аэропорт</td>
+                    <td><time datetime="2014-10-29">2014-10-29</time></td>
+                    <td>10</td>
+                    <td>Регистрация</td>
+                </tr>
+                <tr name="Кольцово">
+                    <td><img class="fly" src="error.png" alt="img"></td>
+                    <td>999</td>
+                    <td>Яндекс авиалинии</td>
+                    <td>
+                        <img class="logo" src="ya.png" alt="img">
+                    </td>
+                    <td>Старый самолёт</td>
+                    <td>Кольцово</td>
+                    <td><time datetime="2014-11-09">2014-11-09</time></td>
+                    <td>10</td>
+                    <td>Отменён</td>
+                </tr>
+                <tr name="Кольцово" value="c_fly">
+                    <td><img class="fly" src="end_fly.gif" alt="img"></td>
+                    <td>911</td>
+                    <td>Добролёт аэрофлот</td>
+                    <td>
+                        <img class="logo" src="dobro_let.png" alt="img">
+                    </td>
+                    <td>Обычный самолёт</td>
+                    <td>Кольцово</td>
+                    <td><time datetime="2014-11-09">2014-11-09</time></td>
+                    <td>5</td>
+                    <td>Летит</td>
+                </tr>
+                <tr name="Шереметьево" value="o_fly">
+                    <td><img class="fly" src="start_fly.gif" alt="img"></td>
+                    <td>1097</td>
+                    <td>Летай с Ашотом</td>
+                    <td>
+                        <img  class="logo" src="uzb.png" alt="img">
+                    </td>
+                    <td>Новенький самолёт</td>
+                    <td>Шереметьево</td>
+                    <td><time datetime="2014-10-25">2014-10-25</time></td>
+                    <td>15</td>
+                    <td>Посадка закончена</td>
+                </tr>
+            </table>
+            <br>
+            <form action="" class="centered">
+                <input name="email" type="email" placeholder="email" required>
+                <br>
+                <br>
+                <input name="phone" type="tel" placeholder="Ваш номер телефона" pattern="^(\+7|8)\d{10}$" required>
+                <br>
+                <br>
+                <button type="submit" class="centered">Отправить</button>
+            </form>
+        </section>
+        <br>
+        <br>
+        <br>
     </body>
 </html>
