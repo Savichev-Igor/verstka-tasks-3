@@ -1,7 +1,7 @@
 table
 {
 	border: 10px outset #1E90FF;
-	border-spacing: 0px 0px;
+	border-spacing: 0;
 	width: auto;
 }
 td
@@ -12,7 +12,7 @@ td
 .centered
 {
 	display: table;
-	margin: 0 auto;
+    margin: 0 auto;
 }
 .main_header
 {
@@ -20,7 +20,7 @@ td
 }
 .main_table
 {
-  overflow: hidden;
+	overflow: hidden;
 }
 .main_table
 tr:first-child{
@@ -32,18 +32,18 @@ tr:not(:first-child):hover td
 }
 td
 {
-  position: relative;
+	position: relative;
 }
 td:not(:first-child):hover::after
 {
-  content: "";
-  position: absolute;
-  background-color: #8EDE4B;
-  left: 0;
-  top: -5000px;
-  height: 10000px;
-  width: 100%;
-  z-index: -1;
+	content: "";
+	position: absolute;
+	background-color: #8EDE4B;
+	left: 0;
+	top: -5000px;
+	height: 10000px;
+	width: 100%;
+	z-index: -1;
 }
 tr:nth-child(2n) td
 {
@@ -59,7 +59,6 @@ tr:nth-child(2n) td
 }
 .fly
 {
-	width: 20px;
 	height: 20px;
 }
 .company
@@ -69,7 +68,6 @@ tr:nth-child(2n) td
 .logo
 {
 	width: 100px;
-	height: 50px;
 }
 .type_aircraft
 {
@@ -91,59 +89,59 @@ tr:nth-child(2n) td
 {
 	width: 80px;
 }
-#c_fly[value="come_fly"]:checked + br + input + br + br + table tr[value="o_fly"]
+#c_fly[value="come_fly"]:checked ~ table tr[value="o_fly"]
 {
 	display: none;
 }
-#o_fly[value="out_fly"]:checked + br + br + table tr[value="c_fly"]
+#o_fly[value="out_fly"]:checked ~ table tr[value="c_fly"]
 {
 	display: none;
 }
-#town_input[value="Кольцово"] + input + br + input + br + input + br + br + table tr[name="Шереметьево"] 
+#town_input[value="Кольцово"] ~ table tr[name="Шереметьево"] 
 {
 	display: none;
 }
-#town_input[value="Кольцово"] + input + br + input + br + input + br + br + table tr[name="Самарский аэропорт"] 
+#town_input[value="Кольцово"] ~ table tr[name="Самарский аэропорт"] 
 {
 	display: none;
 }
-#town_input[value="Кольцово"] + input + br + input + br + input + br + br + table tr[name="Бабушкин аэропорт"] 
+#town_input[value="Кольцово"] ~ table tr[name="Бабушкин аэропорт"] 
 {
 	display: none;
 }
-#town_input[value="Самарский аэропорт"] + input + br + input + br + input + br + br + table tr[name="Кольцово"]
+#town_input[value="Самарский аэропорт"] ~ table tr[name="Кольцово"]
 {
 	display: none;
 }
-#town_input[value="Самарский аэропорт"] + input + br + input + br + input + br + br + table tr[name="Шереметьево"]
+#town_input[value="Самарский аэропорт"] ~ table tr[name="Шереметьево"]
 {
 	display: none;
 }
-#town_input[value="Самарский аэропорт"] + input + br + input + br + input + br + br + table tr[name="Бабушкин аэропорт"]
+#town_input[value="Самарский аэропорт"] ~ table tr[name="Бабушкин аэропорт"]
 {
 	display: none;
 }
-#town_input[value="Шереметьево"] + input + br + input + br + input + br + br + table tr[name="Кольцово"]
+#town_input[value="Шереметьево"] ~ table tr[name="Кольцово"]
 {
 	display: none;
 }
-#town_input[value="Шереметьево"] + input + br + input + br + input + br + br + table tr[name="Самарский аэропорт"] 
+#town_input[value="Шереметьево"] ~ table tr[name="Самарский аэропорт"] 
 {
 	display: none;
 }
-#town_input[value="Шереметьево"] + input + br + input + br + input + br + br + table tr[name="Бабушкин аэропорт"]
+#town_input[value="Шереметьево"] ~ table tr[name="Бабушкин аэропорт"]
 {
 	display: none;
 }
-#town_input[value="Бабушкин аэропорт"] + input + br + input + br + input + br + br + table tr[name="Кольцово"]
+#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Кольцово"]
 {
 	display: none;
 }
-#town_input[value="Бабушкин аэропорт"] + input + br + input + br + input + br + br + table tr[name="Самарский аэропорт"] 
+#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Самарский аэропорт"] 
 {
 	display: none;
 }
-#town_input[value="Бабушкин аэропорт"] + input + br + input + br + input + br + br + table tr[name="Шереметьево"] 
+#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Шереметьево"] 
 {
 	display: none;
 }
