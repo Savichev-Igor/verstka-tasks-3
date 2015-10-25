@@ -6,16 +6,15 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <section>
+        <section class="main_section">
             <h2 class="main_header">Табло аэропорта</h2>
             <!-- Поле для фильтрации по городу -->
-            <input id="town_input" class="centered"
+            <input id="town_input"
                 type="text"
                 placeholder="Аэропорт назначения"
                 value=""
                 onkeyup="this.setAttribute('value', this.value)">
             <!-- Здесь применять вашу самую сильную магию -->
-            <br>
             <br>
             <input id="all_fly" type="radio" name="fly" value="all_fly" checked>Все
             <br>
@@ -25,15 +24,15 @@
             <br>
             <table class="main_table">
                 <tr>
-                    <td class="type"><strong>Тип рейса</strong></td>
-                    <td class="number"><strong>№ рейса</strong></td>
-                    <td class="company"><strong>Авиакомпания</strong></td>
+                    <td><strong>Тип рейса</strong></td>
+                    <td><strong>№ рейса</strong></td>
+                    <td><strong>Авиакомпания</strong></td>
                     <td class="logo"><strong>Логотип авиакомпании</strong></td>
-                    <td class="type_aircraft"><strong>Тип воздушного судна</strong></td>
-                    <td class="destination"><strong>Аэропорт назначения</strong></td>
-                    <td class="time"><strong>Плановое время вылета или прилёта</strong></td>
-                    <td class="number_term"><strong>Номер терминала</strong></td>
-                    <td class="status"><strong>Статус рейса</strong></td>
+                    <td><strong>Тип воздушного судна</strong></td>
+                    <td><strong>Аэропорт назначения</strong></td>
+                    <td><strong>Плановое время вылета или прилёта</strong></td>
+                    <td><strong>Номер терминала</strong></td>
+                    <td><strong>Статус рейса</strong></td>
                 </tr>
                 <tr name="Кольцово" value="o_fly">
                     <td><img class="fly" src="images/types/start_fly.gif" alt="img"></td>
@@ -237,22 +236,14 @@
                     <td>Посадка закончена</td>
                 </tr>
             </table>
-            <br>
-            <div class="centered">
+            <div class="centered_form">
                 <form action="">
                     <input name="email" type="email" placeholder="email" required>
-                    <br>
-                    <br>
                     <input name="phone" type="tel" 
                     placeholder="Ваш номер телефона" pattern="^(\+7|8)\d{10}$" required>
-                    <br>
-                    <br>
                     <button type="submit">Отправить</button>
                 </form>
             </div>
         </section>
-        <br>
-        <br>
-        <br>
     </body>
 </html>

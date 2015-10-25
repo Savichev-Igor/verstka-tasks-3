@@ -1,6 +1,11 @@
-body{
+body
+{
 	width: 80%;
 	margin: auto;
+}
+.main_section
+{
+	padding-bottom: 50px;
 }
 table
 {
@@ -12,10 +17,6 @@ td
 {
 	text-align: center;
 	border: 1px solid black;
-}
-.centered
-{
-	text-align: center;
 }
 .main_header
 {
@@ -52,107 +53,44 @@ tr:nth-child(2n) td
 {
 	background-color: rgba(216, 215, 215, 0.45);
 }
-.type
-{
-	width: 50px;
-}
-.number
-{
-	width: 40px;
-}
 .fly
 {
 	height: 20px;
-}
-.company
-{
-	width: 50px;
 }
 .logo
 {
 	width: 100px;
 }
-.type_aircraft
+.centered_form
 {
-	width: 80px;
+	padding-top: 20px;
 }
-.destination
+.centered_form
+input,
+button
 {
-	width: 80px;
+	display: block;
+	margin: auto auto 10px auto;
 }
-.time
-{
-	width: 100px;
-}
-.number_term
-{
-	width: 80px;
-}
-.status
-{
-	width: 80px;
-}
-#c_fly[value="come_fly"]:checked ~ table tr[value="o_fly"]
-{
-	display: none;
-}
-#o_fly[value="out_fly"]:checked ~ table tr[value="c_fly"]
-{
-	display: none;
-}
-#town_input[value="Кольцово"] ~ table tr[name="Шереметьево"] 
-{
-	display: none;
-}
-#town_input[value="Кольцово"] ~ table tr[name="Самарский аэропорт"] 
-{
-	display: none;
-}
-#town_input[value="Кольцово"] ~ table tr[name="Бабушкин аэропорт"] 
-{
-	display: none;
-}
-#town_input[value="Самарский аэропорт"] ~ table tr[name="Кольцово"]
-{
-	display: none;
-}
-#town_input[value="Самарский аэропорт"] ~ table tr[name="Шереметьево"]
-{
-	display: none;
-}
-#town_input[value="Самарский аэропорт"] ~ table tr[name="Бабушкин аэропорт"]
-{
-	display: none;
-}
-#town_input[value="Шереметьево"] ~ table tr[name="Кольцово"]
-{
-	display: none;
-}
-#town_input[value="Шереметьево"] ~ table tr[name="Самарский аэропорт"] 
-{
-	display: none;
-}
-#town_input[value="Шереметьево"] ~ table tr[name="Бабушкин аэропорт"]
-{
-	display: none;
-}
-#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Кольцово"]
-{
-	display: none;
-}
-#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Самарский аэропорт"] 
-{
-	display: none;
-}
-#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Шереметьево"] 
-{
-	display: none;
-}
+#c_fly[value="come_fly"]:checked ~ table tr[value="o_fly"],
+#o_fly[value="out_fly"]:checked ~ table tr[value="c_fly"],
+#town_input[value="Кольцово"] ~ table tr[name="Шереметьево"],
+#town_input[value="Кольцово"] ~ table tr[name="Самарский аэропорт"],
+#town_input[value="Кольцово"] ~ table tr[name="Бабушкин аэропорт"],
+#town_input[value="Самарский аэропорт"] ~ table tr[name="Кольцово"],
+#town_input[value="Самарский аэропорт"] ~ table tr[name="Шереметьево"],
+#town_input[value="Самарский аэропорт"] ~ table tr[name="Бабушкин аэропорт"],
+#town_input[value="Шереметьево"] ~ table tr[name="Кольцово"],
+#town_input[value="Шереметьево"] ~ table tr[name="Самарский аэропорт"],
+#town_input[value="Шереметьево"] ~ table tr[name="Бабушкин аэропорт"],
+#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Кольцово"],
+#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Самарский аэропорт"],
+#town_input[value="Бабушкин аэропорт"] ~ table tr[name="Шереметьево"],
 button
 {
 	display: none;
 }
 form:valid button
 {
-	display: inline-block;
+	display: block;
 }
