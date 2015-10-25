@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <section class="centered">
+        <section>
             <h2 class="main_header">Табло аэропорта</h2>
             <!-- Поле для фильтрации по городу -->
             <input id="town_input" class="centered"
@@ -15,12 +15,13 @@
                 value=""
                 onkeyup="this.setAttribute('value', this.value)">
             <!-- Здесь применять вашу самую сильную магию -->
+            <br>
+            <br>
             <input id="all_fly" type="radio" name="fly" value="all_fly" checked>Все
             <br>
             <input id="c_fly" type="radio" name="fly" value="come_fly">Прибытие
             <br>
             <input id="o_fly" type="radio" name="fly" value="out_fly">Отправление
-            <br>
             <br>
             <table class="main_table">
                 <tr>
@@ -237,16 +238,18 @@
                 </tr>
             </table>
             <br>
-            <form action="" class="centered">
-                <input name="email" type="email" placeholder="email" required>
-                <br>
-                <br>
-                <input name="phone" type="tel" 
-                placeholder="Ваш номер телефона" pattern="^(\+7|8)\d{10}$" required>
-                <br>
-                <br>
-                <button type="submit" class="centered">Отправить</button>
-            </form>
+            <div class="centered">
+                <form action="">
+                    <input name="email" type="email" placeholder="email" required>
+                    <br>
+                    <br>
+                    <input name="phone" type="tel" 
+                    placeholder="Ваш номер телефона" pattern="^(\+7|8)\d{10}$" required>
+                    <br>
+                    <br>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
         </section>
         <br>
         <br>

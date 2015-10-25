@@ -1,8 +1,12 @@
+body{
+	width: 80%;
+	margin: auto;
+}
 table
 {
 	border: 10px outset #1E90FF;
 	border-spacing: 0;
-	width: auto;
+	width: 100%;
 }
 td
 {
@@ -11,8 +15,7 @@ td
 }
 .centered
 {
-	display: table;
-    margin: 0 auto;
+	text-align: center;
 }
 .main_header
 {
@@ -147,9 +150,9 @@ tr:nth-child(2n) td
 }
 button
 {
-	display: none !important;
+	display: none;
 }
 form:valid button
 {
-	display: table !important;
+	display: inline-block;
 }
